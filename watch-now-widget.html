@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Watch Now</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="widgets.css" rel="stylesheet">
+  <style>
+  /**
+  * Add css overrides here
+  **/
+  </style>
+</head>
+
+<body>
+    <div class="wrap thickbar flex-wrapper watch-now">
+      <div class="red-dot"></div>
+      <div class="text-content">
+        <div class="headline"><strong>Live Now /</strong> Watch WPRI-TV 12 News at 6pm</div>
+        <div class="red-line"></div>
+        <div class="cta"><strong>Watch Full Screen</strong> <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></div>
+      </div>
+      <div class="video-embed">
+        <div id="p0"></div>
+        <script src="//w3.cdn.anvato.net/player/prod/v3/scripts/anvload.js"></script><script>
+          AnvatoPlayer("p0").init({
+            accessKey:"m3E80nAx02K5gfOPJSgHJMr7nAk9MbDP",
+            video:"adstAGlNmYVOd6p5",
+            token:"ql0Qx3McWd4_xZ6gA8Nm-EHyDo5iMc8Za-P3sr7VuZs~Mn4wfg",
+            mcp:"LIN",
+            autoplay:true,
+            width:"100%",
+            trackTimePeriod:"30",
+            plugins:{
+                 comscore: {
+              script: 'https://storage.googleapis.com/web-player-test/comscore/ComScorePlugin.min.js',
+              clientId: '6036439',
+              useDerivedMetadata: true,
+              mapping: {
+              video:{
+                c3: 'https://www.wpri.com/',
+                c4: '*null',
+                c6: '*null',
+                ns_st_cl: '{{COMSCORE_CLIP_LENGTH}}',
+                ns_st_pr: '{{TITLE}}',
+                ns_st_ep: '{{EPISODE}}',
+                ns_st_ge: 'News',
+                ns_st_st: 'wpri',
+                ns_st_pu: 'Nexstar',
+                ns_st_en: '*null',
+                ns_st_sn: '*null',
+                ns_st_ia: '*null',
+                ns_st_ce: '*null',
+                ns_st_ddt: '*null',
+                ns_st_tdt: '*null',
+              },
+              ad: {
+                  ns_st_cl: '{{COMSCORE_CLIP_LENGTH}}',
+                }
+              }
+            },
+              googleAnalytics:{
+                trackingId:"UA-32507368-30",
+                events:{
+                VIDEO_STARTED:{
+                  alias:"Live Stream - videoContentPlay",
+                  category:"Live Stream"
+                },
+                VIDEO_COMPLETED:{
+                  alias:"Live Stream - videoComplete",
+                  category:"Live Stream"
+                },
+                USER_PAUSE:{
+                  alias:"Live Stream - videoPause",
+                  category:"Live Stream"
+                },
+                VIDEO_VIEWED:{
+                  alias:"Live Stream - videoViewCheckpoint",
+                  category:"Live Stream"
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </div>
+    </div>
+</body>
+</html>

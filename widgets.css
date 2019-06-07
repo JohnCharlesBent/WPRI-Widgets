@@ -1,0 +1,118 @@
+/**
+* Global css values -- applies to all widgets that call this file
+**/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/**
+* Above hero / Thick bar widget css
+**/
+
+.wrap.thickbar {
+  max-width: 750px;
+  width: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/**
+* Specific widget css -- widgets will be noted by their file name
+**/
+
+/** watch-now-widget **/
+.red-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 45%;
+  background: red;
+  margin-left: 1rem;
+  margin-top: -2.3rem;
+}
+.text-content {
+  width: calc(75% - .5rem);
+  font-size: 1rem;
+  color: #fff;
+  position: relative;
+  margin-left: .75rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.text-content strong {
+  font-weight: 800;
+}
+.text-content .cta {
+  padding-top: 1rem;
+  text-align: right;
+  margin-right: 1rem;
+}
+.text-content .red-line {
+  height: 3px;
+  background: red;
+  width: 100%;
+  margin-top:.15rem;
+}
+.video-embed {
+  width: calc(25% - .5rem);
+  margin: .25rem;
+  padding: .25rem;
+  margin-left: auto;
+}
+
+
+/**
+* Third column widget css
+**/
+.wrap.third-col {
+  width: 100%;
+  max-width: 350px;
+}
+
+/**
+* Specific widget css -- widgets will be noted by their file name
+**/
+
+/** local-new-sidebar.html **/
+.icon {
+  height: 20px;
+  width: auto;
+  display: inline-block;
+}
+table {
+  width: 100%;
+  color: #000;
+  font-size: .8rem;
+}
+table tr:nth-child(odd) {
+  background: #eee;
+}
+tr td {
+  vertical-align: middle;
+}
+tr td span.img {
+  width: 40px;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  margin-right: .5rem;
+} tr td a {
+  text-decoration: none;
+  color: inherit;
+}
+tr td i {
+  width: 30px;
+  font-size: 2rem;
+  display: inline-block;
+  padding: .25rem;
+}
